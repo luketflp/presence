@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+import { User } from "lucide-react"
 
 const navItems = [
   { name: "Events", href: "/events" },
@@ -66,10 +67,13 @@ export default function Navigation() {
           ))}
         </nav>
 
+             {/* botão callback que não faz nada no momento */}
         <div className="hidden md:flex items-center gap-4">
-          <Button variant="outline" size="sm">
-            
-          </Button>
+         
+            <button onClick={() => {}}>
+            <User />
+            </button>
+          
           
         </div>
 
@@ -112,10 +116,11 @@ export default function Navigation() {
                 ))}
               </nav>
 
+                  {/* botão callback que não faz nada no momento */}
               <div className="flex flex-col gap-2 pt-4 border-t">
-                <Button variant="outline" className="w-full">
-                  
-                </Button>
+                  <button onClick={() => {}}>     
+                    <User />
+            </button>
                
               </div>
             </div>
