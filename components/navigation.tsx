@@ -68,9 +68,9 @@ export default function Navigation() {
 
         <div className="hidden md:flex items-center gap-4">
           <Button variant="outline" size="sm">
-            Log in
+            
           </Button>
-          <Button size="sm">Sign up</Button>
+          
         </div>
 
         <div className="flex md:hidden items-center gap-4">
@@ -114,9 +114,9 @@ export default function Navigation() {
 
               <div className="flex flex-col gap-2 pt-4 border-t">
                 <Button variant="outline" className="w-full">
-                  Log in
+                  
                 </Button>
-                <Button className="w-full">Sign up</Button>
+               
               </div>
             </div>
           </motion.div>
