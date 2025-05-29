@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X, User } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
-import { Login } from "@/components/ui/model-login"
+import { Login } from "@/components/ui/login-modal"
 
 const navItems = [
   { name: "Events", href: "/events" },
