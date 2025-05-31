@@ -18,7 +18,7 @@ export function Login({ open, onOpenChange }: LoginModalProps) {
         <div className="space-y-4">
           <div>
             <Label htmlFor="email">Email address</Label>
-            <Input id="email" type="email" placeholder="you@example.com" className="text-black border-none shadow-none focus:outline-none focus:ring-0 focus:border-transparent " />
+            <Input id="email" type="email" placeholder="you@example.com" className="text-black focus:ring-gray-500 focus:border-gray-500 focus:outline-none !ring-gray-500 !border-gray-500" />
           </div>
           <div>
             <Label htmlFor="password">Password</Label>
@@ -29,13 +29,13 @@ export function Login({ open, onOpenChange }: LoginModalProps) {
             Not a member? <a href="#" className="underline">Signup now</a>
           </p>
 
-          {/* Botão de "Forgot your password?" */}
+          {/* "Forgot your password?" button" */}
           <Button
             variant="link"
             className="text-sm text-center mt-2 w-full text-muted-foreground"
             onClick={() => console.log("Forgot password clicked")}
           >
-            
+            Forgot your password?
           </Button>
         </div>
       </DialogContent>
