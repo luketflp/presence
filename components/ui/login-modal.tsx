@@ -13,16 +13,16 @@ interface LoginModalProps {
 export function Login({ open, onOpenChange }: LoginModalProps) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="bg-white text-black max-w-[400px] rounded-md p-6">
+      <DialogContent className="bg-black text-white max-w-[400px] rounded-md p-6">
         <h2 className="text-xl font-bold mb-4">Login</h2>
         <div className="space-y-4">
           <div>
             <Label htmlFor="email">Email address</Label>
-            <Input id="email" type="email" placeholder="you@example.com" className="text-black focus:ring-gray-500 focus:border-gray-500 focus:outline-none !ring-gray-500 !border-gray-500" />
+            <Input id="email" type="email" placeholder="you@example.com" className="text-white focus:ring-gray-500 focus:border-gray-500 focus:outline-none !ring-gray-500 !border-gray-500" />
           </div>
           <div>
             <Label htmlFor="password">Password</Label>
-            <Input id="password" type="password" placeholder="Password" className="text-black focus:ring-gray-500 focus:border-gray-500 focus:outline-none !ring-gray-500 !border-gray-500" />
+            <Input id="password" type="password" placeholder="Password" className="text-white focus:ring-gray-500 focus:border-gray-500 focus:outline-none !ring-gray-500 !border-gray-500" />
           </div>
           <Button className="w-full mt-4">Login</Button>
           <p className="text-sm text-center mt-2 text-muted-foreground">
