@@ -27,19 +27,6 @@ export function Login({ open, onOpenChange }: LoginModalProps) {
           <Button className="w-full mt-4">Login</Button>
 
 
-
-
-
-
-{/* 
-          <p className="text-sm text-center mt-2 text-muted-foreground">
-            Not a member?{" "}
-              <a href="#" className="underline  hover:text-primary/80">
-            Signup now
-          </a>
-          </p> */}
-
-          
           <p className="text-sm text-center mt-2 text-muted-foreground">
              
              <Button    
@@ -52,12 +39,7 @@ export function Login({ open, onOpenChange }: LoginModalProps) {
           </p>
 
 
-
-
-
-{/* Signup now */}
-
-          {/* "Forgot your password?" button" */}
+         
           <Button
             variant="link"
             className="text-sm text-center mt-2 w-full text-muted-foreground"
