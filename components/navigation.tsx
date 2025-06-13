@@ -113,7 +113,8 @@ export default function Navigation() {
                 ))}
               </nav>
 
-              {/* botão callback que não faz nada no momento */}
+
+            
               <div className="flex flex-col gap-2 pt-4 border-t">
                 <button onClick={() => {}}>
                   <User />

@@ -14,6 +14,10 @@ export function Login({ open, onOpenChange }: LoginModalProps) {
   return (  
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="bg-white dark:bg-[#111] max-w-[400px] text-black dark:text-white">
+
+   
+
+
         <h2 className="text-xl font-bold mb-4">Login</h2>
         <div className="space-y-4">
           <div>
