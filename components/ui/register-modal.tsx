@@ -1,10 +1,11 @@
 "use client"
 
-import { Dialog, DialogContent } from "@/components/ui/dialog"
+"use client"
+
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Button } from "@/components/ui/button"
-
 
 interface RegisterModalProps {
   open: boolean
@@ -12,58 +13,58 @@ interface RegisterModalProps {
 }
 
 export function Register({ open, onOpenChange }: RegisterModalProps) {
-  return (
+  return (  
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="bg-white dark:bg-black text-black dark:text-white max-w-[400px] rounded-md p-6">
-        <h2 className="text-xl font-bold mb-4">Create your account</h2>
+      <DialogContent className="bg-white dark:bg-[#111] max-w-[400px] text-black dark:text-white">
+        <DialogTitle className="text-xl font-bold mb-4">Create account</DialogTitle>
         <div className="space-y-4">
           <div>
-            <Label htmlFor="name">Name</Label>
-            <Input
-              id="name"
-              type="text"
-              placeholder="Your full name"
-              className="text-black dark:text-white focus:ring-gray-500 focus:border-gray-500"
+            <Label htmlFor="username">Username</Label>
+            <Input 
+              id="username" 
+              type="text" 
+              placeholder="Your Name" 
+              className="text-black dark:text-white focus:border-gray-500 focus:ring-gray-500" 
             />
           </div>
           <div>
             <Label htmlFor="email">Email</Label>
-            <Input
-              id="email"
-              type="email"
-              placeholder="you@example.com"
-              className="text-black dark:text-white focus:ring-gray-500 focus:border-gray-500"
+            <Input 
+              id="email" 
+              type="email" 
+              placeholder="your@email.com" 
+              className="text-black dark:text-white focus:border-gray-500 focus:ring-gray-500" 
             />
           </div>
           <div>
             <Label htmlFor="password">Password</Label>
-            <Input
-              id="password"
-              type="password"
-              placeholder="Password"
-              className="text-black dark:text-white focus:ring-gray-500 focus:border-gray-500"
+            <Input 
+              id="password" 
+              type="password" 
+              placeholder="Your Password" 
+              className="text-black dark:text-white focus:border-gray-500 focus:ring-gray-500" 
             />
           </div>
           <div>
-            <Label htmlFor="phone">Phone</Label>
-            <Input
-              id="phone"
-              type="tel"
-              placeholder="(00) 00000-0000"
-              className="text-black dark:text-white focus:ring-gray-500 focus:border-gray-500"
+            <Label htmlFor="telephone">Phone Number</Label>
+            <Input 
+              id="telephone" 
+              type="tel" 
+              placeholder="Phone Number" 
+              className="text-black dark:text-white focus:border-gray-500 focus:ring-gray-500" 
             />
           </div>
           <Button className="w-full mt-4">Register</Button>
 
-          <div className="text-sm text-center mt-2 w-full text-muted-foreground">
-            Already have an account?{" "}
-            <button
-              className="no-underline hover:underline hover:text-foreground"
-              onClick={() => console.log("Login clicked")}
+          <p className="text-sm text-center mt-2 text-muted-foreground">
+            <Button    
+              variant="link"
+              className="text-sm text-center mt-2 w-full text-muted-foreground"
+              onClick={() => onOpenChange(false)}
             >
-              Login
-            </button>
-          </div>
+              Have an account? Log in
+            </Button>
+          </p>
         </div>
       </DialogContent>
     </Dialog>
