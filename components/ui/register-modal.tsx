@@ -1,7 +1,5 @@
 "use client"
 
-"use client"
-
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -19,7 +17,7 @@ export function Register({ open, onOpenChange }: RegisterModalProps) {
         <DialogTitle className="text-xl font-bold mb-4">Create account</DialogTitle>
         <div className="space-y-4">
           <div>
-            <Label htmlFor="username">Username</Label>
+            <Label htmlFor="username">Full-Names</Label>
             <Input 
               id="username" 
               type="text" 
