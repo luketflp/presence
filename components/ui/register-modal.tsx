@@ -14,7 +14,7 @@ interface RegisterModalProps {
 }
 
 interface FormData {
-  username: string
+  full_name: string
   email: string
   password: string
   telephone: string
@@ -27,7 +27,7 @@ export function Register({ open, onOpenChange }: RegisterModalProps) {
     handleSubmit,
     formState: { errors, isSubmitting },
   } = useForm<FormData>({
-    defaultValues: { username: "", email: "", password: "", telephone: "" },
+    defaultValues: { full_name: "", email: "", password: "", telephone: "" },
   })
 
   const onSubmit = async (data: FormData) => {
@@ -43,15 +43,15 @@ export function Register({ open, onOpenChange }: RegisterModalProps) {
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
           {/* Username */}
           <div>
-            <Label htmlFor="username">Username</Label>
+            <Label htmlFor="full_name">Full name</Label>
             <Input
-              id="username"
-              {...register("username", { required: "Username is required" })}
+              id="full_name"
+              {...register("full_name", { required: "Full name is required" })}
               placeholder="Your Name"
               className="text-black dark:text-white focus:border-gray-500 focus:ring-gray-500"
             />
-            {errors.username && (
-              <p className="text-red-600 text-sm mt-1">{errors.username.message}</p>
+            {errors.full_name && (
+              <p className="text-red-600 text-sm mt-1">{errors.full_name.message}</p>
             )}
           </div>
 
