@@ -61,15 +61,29 @@ export default function HeroSection() {
             className="mt-10"
           >
             <Tabs defaultValue="events" className="w-full" onValueChange={setActiveTab}>
-              <TabsList className="grid w-full max-w-md mx-auto grid-cols-2">
-                <TabsTrigger value="events">Find Events</TabsTrigger>
-                <TabsTrigger value="staffing">Find Staff</TabsTrigger>
+              <TabsList className="flex w-full max-w-md mx-auto bg-zinc-200/80 dark:bg-zinc-900/70 rounded-xl p-1 gap-2 shadow-lg">
+                <TabsTrigger
+                  value="events"
+                  className="flex-1 rounded-lg py-2 px-4 transition-all duration-200 data-[state=active]:bg-primary data-[state=active]:text-white
+
+                    dark:data-[state=active]:bg-primary dark:data-[state=active]:text-white hover:bg-primary/10 hover:text-primary dark:hover:bg-primary/20 dark:hover:text-white text-zinc-700 dark:text-zinc-300 focus:outline-none focus:ring-2 focus:ring-primary"
+                >
+                  Find Catering
+                </TabsTrigger>
+                <TabsTrigger
+                  value="staffing"
+                 className="flex-1 rounded-lg py-2 px-4 transition-all duration-200 data-[state=active]:bg-primary data-[state=active]:text-white
+
+                    dark:data-[state=active]:bg-primary dark:data-[state=active]:text-white hover:bg-primary/10 hover:text-primary dark:hover:bg-primary/20 dark:hover:text-white text-zinc-700 dark:text-zinc-300 focus:outline-none focus:ring-2 focus:ring-primary"
+                >
+                  Find Staff
+                </TabsTrigger>
               </TabsList>
               <TabsContent value="events" className="mt-4">
                 <div className="flex flex-col sm:flex-row gap-2">
                   <div className="relative flex-1">
                     <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-                    <Input placeholder="Search events..." className="pl-9" aria-label="Search events" />
+                    <Input placeholder="Search Catering..." className="pl-9" aria-label="Search events" />
                   </div>
                   <div className="relative sm:w-40">
                     <Calendar className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
