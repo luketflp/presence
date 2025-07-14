@@ -4,10 +4,10 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
-import { Menu, X } from "lucide-react"
+import { Menu, X, User } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
-import { User } from "lucide-react"
+import { Login } from "@/components/ui/login-modal"
 
 const navItems = [
   { name: "Events", href: "/events" },
@@ -18,6 +18,7 @@ const navItems = [
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [loginOpen, setLoginOpen] = useState(false)
   const pathname = usePathname()
 
   useEffect(() => {
@@ -67,14 +68,10 @@ export default function Navigation() {
           ))}
         </nav>
 
-             {/* botão callback que não faz nada no momento */}
         <div className="hidden md:flex items-center gap-4">
-         
-            <button onClick={() => {}}>
+          <button onClick={() => setLoginOpen(true)}>
             <User />
-            </button>
-          
-          
+          </button>
         </div>
 
         <div className="flex md:hidden items-center gap-4">
@@ -116,17 +113,19 @@ export default function Navigation() {
                 ))}
               </nav>
 
-                  {/* botão callback que não faz nada no momento */}
+
+            
               <div className="flex flex-col gap-2 pt-4 border-t">
-                  <button onClick={() => {}}>     
-                    <User />
-            </button>
-               
+                <button onClick={() => {}}>
+                  <User />
+                </button>
               </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
+
+      <Login open={loginOpen} onOpenChange={setLoginOpen} />
     </header>
   )
 }
