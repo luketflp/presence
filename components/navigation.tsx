@@ -12,7 +12,7 @@ import { Login } from "@/components/ui/login-modal"
 const navItems = [
   { name: "Events", href: "/events" },
   { name: "Staffing", href: "/staffing" },
-  { name: "About", href: "/about" },
+  { name: "about", href: "/about" },
 ]
 
 export default function Navigation() {
