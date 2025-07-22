@@ -1,8 +1,8 @@
-version: '3.8'
+
 
 services:
   db:
-    image: postgres:17.5
+    image: postgres:16
     restart: always
     environment:
       POSTGRES_USER: postgres
@@ -13,19 +13,19 @@ services:
     volumes:
       - db_data:/var/lib/postgresql/data
 
-  # app:
-  #   build: .
-  #   command: npm run dev
-  #   working_dir: /usr/src/app
-  #   volumes:
-  #     - .:/usr/src/app
-  #     - /usr/src/app/node_modules
-  #   ports:
-  #     - "3000:3000"
-  #   environment:
-  #     DATABASE_URL: postgres://postgres:postgres@db:5432/events_develop
-  #   depends_on:
-  #     - db
+  app:
+    build: .
+    command: npm run dev
+    working_dir: /usr/src/app
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: postgres://postgres:postgres@db:5432/presence_develop
+    depends_on:
+      - db
 
 volumes:
   db_data:
