@@ -47,7 +47,7 @@ export default function HeroSection() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
               Your Gateway to Exceptional <span className="text-primary">Events</span> &{" "}
-              <span className="text-secondary">Talent</span>
+              <span className="text-primary">Talent</span>
             </h1>
             <p className="mt-6 text-lg text-muted-foreground">
               Discover and book tickets for amazing events or find the perfect staff for your next occasion
