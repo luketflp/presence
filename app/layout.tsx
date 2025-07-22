@@ -7,7 +7,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "EventHub - Your Gateway to Exceptional Events & Talent",
+  title: "EventHub",
   description: "Discover and book tickets for amazing events or find the perfect staff for your next occasion",
     generator: 'v0.dev'
 }
